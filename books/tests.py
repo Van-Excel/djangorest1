@@ -20,6 +20,8 @@ class BookTests(TestCase):
         self.assertEqual(self.book.author, 'Tom Christie')
         self.assertEqual(self.book.isbn, '12345678910')
 
+    # test client
+
     def test_book_listview(self):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
